@@ -52,10 +52,3 @@ metadata:
       - name: payment
         image: rkalluru/payment
 ---
-apiVersion: v1
-kind: Pod
-metadata:
-  name: dispatch
-spec:
-  - name: dispatch
-    image: rkalluru/dispatch
