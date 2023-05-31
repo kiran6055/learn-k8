@@ -7,13 +7,13 @@ metadata:
 spec:
   replicas: 1
   selector:
-      matchLabels:
+    matchLabels:
       component: {{ .Values.component }}
   template:
-     metadata:
+    metadata:
       labels:
         component: {{ .Values.component }}
-     spec:
+    spec:
       containers:
-        - name: catalogue
+        - name: {{ .Values.component }}
           image: rkalluru/{{ .Values.component }}
