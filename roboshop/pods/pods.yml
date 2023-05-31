@@ -71,7 +71,7 @@ metadata:
   labels:
     component: catalogue
 spec:
-  replicas: 2
+  replicas: 4
   selector:
     matchLabels:
       component: catalogue
