@@ -8,15 +8,13 @@ metadata:
 spec:
   replicas: 4
   selector:
-    # selector labels for pods, meaning pods are attached to to replicaset liks service svc in replicaset using these selectors
-    matchLabels:
+      matchLabels:
       component: {{ .Values.component}}
   template:
-    metadata:
-      # pod labels
+     metadata:
       labels:
         component: {{ .Values.component}}
-    spec:
+     spec:
       containers:
         - name: catalogue
           image: rkalluru/{{ .Values.component}}
