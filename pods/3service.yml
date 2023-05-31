@@ -14,7 +14,7 @@ kind: Service
 metadata:
   name: service-3
 spec:
-  selectors:
+  selector:
     name: 3-service
   ports:
     - protocol: TCP
