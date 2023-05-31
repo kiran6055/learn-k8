@@ -5,6 +5,7 @@ metadata:
   labels:
     component: frontend
 spec:
+  hostNetwork: true #(this is need to be given in order to work hostport)
   containers:
     - name: frontend
       image: rkalluru/frontend
