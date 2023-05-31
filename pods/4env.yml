@@ -26,7 +26,7 @@ spec:
 
 ---
 apiVersion: v1
-kind: Pod
+kind: ConfigMap
 metadata:
   name: 4-cm
 data:
