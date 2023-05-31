@@ -60,7 +60,7 @@ spec:
       image: rkalluru/catalogue
       env:
         - name: DOCUMENTDB
-          value: true
+          value: "true"
         - name: MONGO_URL
           value: "mongodb://admin1:RoboShop123@prod-docdb-cluster.cluster-ccs4h9brfzmd.us-east-1.docdb.amazonaws.com:27017/catalogue?tls=true&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false"
 ---
@@ -86,6 +86,7 @@ spec:
   containers:
     - name: user
       image: rkalluru/user
+
 ---
 apiVersion: v1
 kind: Service
