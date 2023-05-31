@@ -11,7 +11,7 @@ spec:
 ---
 apiVersion: v1
 kind: Service
-Metadata:
+metadata:
   name: frontend-roboshop
 spec:
   selector:
@@ -34,7 +34,7 @@ spec:
 ---
 apiVersion: v1
 kind: Service
-Metadata:
+metadata:
   name: cart-roboshop
 spec:
   selector:
@@ -57,7 +57,7 @@ spec:
 ---
 apiVersion: v1
 kind: Service
-Metadata:
+metadata:
   name: catalogue-roboshop
 spec:
   selector:
@@ -80,7 +80,7 @@ spec:
 ---
 apiVersion: v1
 kind: Service
-Metadata:
+metadata:
   name: user-roboshop
 spec:
   selector:
@@ -103,7 +103,7 @@ spec:
 ---
 apiVersion: v1
 kind: Service
-Metadata:
+metadata:
   name: shipping-roboshop
 spec:
   selector:
@@ -126,7 +126,7 @@ spec:
 ---
 apiVersion: v1
 kind: Service
-Metadata:
+metadata:
   name: payment-roboshop
 spec:
   selector:
