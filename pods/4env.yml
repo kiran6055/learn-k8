@@ -19,6 +19,7 @@ spec:
   containers:
     - name: nginx
       image: nginx
+      envFrom:
       - configMapRef:
           name: 4-cm
 
