@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.component }}
+  #replica set labels
+  labels:
+    component: {{ .Values.component}}
+spec:
+  replicas: 4
+  selector:
+    # selector labels for pods, meaning pods are attached to to replicaset liks service svc in replicaset using these selectors
+    matchLabels:
+      component: {{ .Values.component}}
+  template:
+    metadata:
+      # pod labels
+      labels:
+        component: {{ .Values.component}}
+    spec:
+      containers:
+        - name: catalogue
+          image: rkalluru/{{ .Values.component}}
+          env:
+            - name: DOCUMENTDB
+              value: "true"
+            - name: MONGO_URL
+              value: "mongodb://admin1:RoboShop123@prod-docdb-cluster.cluster-ccs4h9brfzmd.us-east-1.docdb.amazonaws.com:27017/catalogue?tls=true&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false"
+---
