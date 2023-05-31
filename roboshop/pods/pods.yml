@@ -8,15 +8,16 @@ spec:
   containers:
     - name: frontend
       image: rkalluru/frontend
-      ports:
-        - hostPort: 30678 #(kubectl has a port range from 30k to 34k )
-          containerPort: 80
+#      ports: #(this is on pod level)
+#        - hostPort: 30678 #(kubectl has a port range from 30k to 34k )
+#          containerPort: 80
 ---
 apiVersion: v1
 kind: Service
 metadata:
   name: frontend-roboshop
 spec:
+  type: NodePort
   selector:
     component: frontend
   ports:
