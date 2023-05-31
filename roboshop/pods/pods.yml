@@ -8,7 +8,7 @@ spec:
   containers:
     - name: frontend
       image: rkalluru/frontend
-#      ports: #(this is on pod level)
+#      ports: #(this is on pod level but it is not working)
 #        - hostPort: 30678 #(kubectl has a port range from 30k to 34k )
 #          containerPort: 80
 ---
