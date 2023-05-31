@@ -68,21 +68,24 @@ apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
   name: catalogue
+  #replica set labels
   labels:
     component: catalogue
 spec:
   replicas: 4
   selector:
+    # selector labels for pods, meaning pods are attached to to replicaset liks service svc in replicaset using these selectors
     matchLabels:
       component: catalogue
   template:
     metadata:
+      # pod labels
       labels:
         component: catalogue
     spec:
       containers:
         - name: catalogue
-          image: rkalluru/catalogue
+          image: rkalluru/catalogue:k1
           env:
             - name: DOCUMENTDB
               value: "true"
