@@ -9,7 +9,7 @@ spec:
     - name: frontend
       image: rkalluru/frontend
       ports:
-        - hostPort: 7163
+        - hostPort: 30678 #(kubectl has a port range from 30k to 34k )
           containerPort: 80
 ---
 apiVersion: v1
