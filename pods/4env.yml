@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: 4env.yml
+spec:
+  containers:
+    - name: nginx
+      image: nginx
+      env:
+        - name: URL
+          value: ww.kiran.com
