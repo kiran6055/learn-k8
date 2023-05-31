@@ -3,17 +3,17 @@ kind: Deployment
 metadata:
   name: {{ .Values.component }}
   labels:
-    component: {{ .Values.component}}
+    component: {{ .Values.component }}
 spec:
   replicas: 1
   selector:
       matchLabels:
-      component: {{ .Values.component}}
+      component: {{ .Values.component }}
   template:
      metadata:
       labels:
-        component: {{ .Values.component}}
+        component: {{ .Values.component }}
      spec:
       containers:
         - name: catalogue
-          image: rkalluru/{{ .Values.component}}
+          image: rkalluru/{{ .Values.component }}
