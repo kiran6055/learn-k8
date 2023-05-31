@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: 4env.yml
+  name: 4-env.yml
 spec:
   containers:
     - name: nginx
