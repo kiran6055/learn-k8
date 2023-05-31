@@ -9,3 +9,25 @@ spec:
       env:
         - name: URL
           value: ww.kiran.com
+---
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: 4-env1
+spec:
+  containers:
+    - name: nginx
+      image: nginx
+      - configMapRef:
+          name: 4-cm
+
+
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: 4-cm
+data:
+  URL: example.com
+  ENV: prod.example.com
